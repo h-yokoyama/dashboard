@@ -25,6 +25,9 @@ jobs:
             ${{ runner.os }}-node-
 
       - run: npm ci
+      # rootパス指定となるためPUBLIC_URLを設定する
+      # これをすることで`${PUBLIC_URL}${PATH}としてビルドしてくれる
+      - run: PUBLIC_URL=https://h-yokoyama.github.io/dashboard
       - run: npm run build
 
       - name: Deploy
