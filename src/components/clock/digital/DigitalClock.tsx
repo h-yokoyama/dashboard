@@ -1,8 +1,8 @@
-import { useContext } from 'react'
-import { DateContext } from '../Clock'
+import React, { useContext } from 'react'
 import { zeroPadding } from '../../../lib/ClockUtil'
+import { DateContext } from '../Clock'
 
-export default function DigitalClock() {
+const DigitalClock: React.FC = () => {
   const date = useContext<Date>(DateContext)
   const hour = zeroPadding(date.getHours(), 2)
   const minute = zeroPadding(date.getMinutes(), 2)
@@ -13,3 +13,4 @@ export default function DigitalClock() {
     </p>
   )
 }
+export default DigitalClock

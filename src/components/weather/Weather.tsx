@@ -1,20 +1,23 @@
+import { Box, Grid } from '@mui/material'
+import CircularProgress from '@mui/material/CircularProgress'
 import { useEffect, useState } from 'react'
+import { defaultWeatherProps } from '../../data/Weather'
+import { IWeathersProps } from '../../interface/Weather'
+import { zeroPadding } from '../../lib/ClockUtil'
+import PublishOn from '../PublishOn'
 import NearWeatherCard from './NearWeatherCard'
 import WeekWeatherCard from './WeekWeatherCard'
-import CircularProgress from '@mui/material/CircularProgress'
-import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid'
-import PublishOn from '../PublishOn'
-import { zeroPadding } from '../../lib/ClockUtil'
 
 const BASE_URL = 'https://lambda-result-bucket.s3.ap-northeast-1.amazonaws.com/'
 const URL_NEAR = `${BASE_URL}ytenki_near.json`
 const URL_WEEK = `${BASE_URL}ytenki_week.json`
 const INTERVAL = 60 * 60 * 2 * 1000 // 2hour
 
-export default function Weather() {
-  const [nearWeather, setNearWeather] = useState<any>()
-  const [weekWeather, setWeekWeather] = useState<any>()
+const Weather: React.FC = () => {
+  const [nearWeather, setNearWeather] =
+    useState<IWeathersProps>(defaultWeatherProps)
+  const [weekWeather, setWeekWeather] =
+    useState<IWeathersProps>(defaultWeatherProps)
   const [fetchDate, setFetchDate] = useState<string>()
   const [nextFetchDate, setNextFetchDate] = useState<string>()
   const [loading, setLoading] = useState(true)
@@ -109,3 +112,4 @@ export default function Weather() {
     </>
   )
 }
+export default Weather

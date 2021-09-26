@@ -1,9 +1,9 @@
-export interface NearWeathersProps {
-  dates: Weather[]
+export interface IWeathersProps {
+  dates: IWeather[]
   publishOn: string
 }
 
-export interface Weather {
+export interface IWeather {
   date: string
   weather: string
   src: string
@@ -19,25 +19,4 @@ export interface Weather {
   rainyPer4?: string
   wave?: string
   wind?: string
-}
-
-export const defaultNearWeatherProps: NearWeatherProps = {
-  dates: {
-    date: '',
-    weather: '',
-    src: '',
-    high: '',
-    low: '',
-    time1: '',
-    time2: '',
-    time3: '',
-    time4: '',
-    rainyPer1: '',
-    rainyPer2: '',
-    rainyPer3: '',
-    rainyPer4: '',
-    wave: '',
-    wind: ''
-  },
-  publishOn: ''
 }

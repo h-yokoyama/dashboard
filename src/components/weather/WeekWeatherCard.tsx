@@ -1,14 +1,15 @@
 import { CardContent, Typography, Card, CardMedia } from '@mui/material'
 import { red, blue } from '@mui/material/colors'
-import { Weather } from '../../interface/Weather'
+import React from 'react'
+import { IWeather } from '../../interface/Weather'
 
-export default function WeekWeatherCard({
+const WeekWeatherCard: React.FC<IWeather> = ({
   date,
   src,
   high,
   low,
   weather
-}: Weather) {
+}) => {
   return (
     <Card sx={{ m: 1, pb: 2, textAlign: 'center' }}>
       <CardContent>
@@ -32,3 +33,4 @@ export default function WeekWeatherCard({
     </Card>
   )
 }
+export default WeekWeatherCard

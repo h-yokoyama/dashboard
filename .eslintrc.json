@@ -8,7 +8,10 @@
     "standard-with-typescript",
     "standard-jsx",
     "plugin:react/recommended",
-    "plugin:css-modules/recommended"
+    "plugin:css-modules/recommended",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
   ],
   "plugins": [
     "react-hooks",
@@ -21,7 +24,15 @@
     "@typescript-eslint/space-before-function-paren": 0,
     "react/jsx-closing-bracket-location": 0,
     "react/jsx-uses-react": "off",
-    "react/react-in-jsx-scope": "off"
+    "react/react-in-jsx-scope": "off",
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ]
   },
   "parser": "babel-eslint",
   "settings": {

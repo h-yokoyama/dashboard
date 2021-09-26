@@ -1,8 +1,9 @@
-import Weather from './weather/Weather'
-import Clock from './clock/Clock'
 import { Grid, Box } from '@mui/material'
+import React from 'react'
+import Clock from './clock/Clock'
+import Weather from './weather/Weather'
 
-export default function DashBoard() {
+const DashBoard: React.FC = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={1}>
@@ -16,3 +17,4 @@ export default function DashBoard() {
     </Box>
   )
 }
+export default DashBoard

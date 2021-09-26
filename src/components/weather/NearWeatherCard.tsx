@@ -1,23 +1,23 @@
-import Card from '@mui/material/Card'
-import CardMedia from '@mui/material/CardMedia'
-import CardContent from '@mui/material/CardContent'
-import Typography from '@mui/material/Typography'
+import {
+  Card,
+  CardMedia,
+  CardContent,
+  Typography,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow
+} from '@mui/material'
 import { red, blue } from '@mui/material/colors'
+import { IWeather } from '../../interface/Weather'
 
-import Table from '@mui/material/Table'
-import TableBody from '@mui/material/TableBody'
-import TableCell from '@mui/material/TableCell'
-import TableContainer from '@mui/material/TableContainer'
-import TableHead from '@mui/material/TableHead'
-import TableRow from '@mui/material/TableRow'
-
-import { Weather } from '../../interface/Weather'
-
-function createData(time: any, rainyPer: any) {
+function createData(time: string, rainyPer: string) {
   return { time, rainyPer }
 }
 
-export default function NearWeatherCard({
+const NearWeatherCard: React.FC<IWeather> = ({
   date,
   weather,
   src,
@@ -33,12 +33,12 @@ export default function NearWeatherCard({
   rainyPer4,
   wave,
   wind
-}: Weather) {
+}) => {
   const rows = [
-    createData(time1, rainyPer1),
-    createData(time2, rainyPer2),
-    createData(time3, rainyPer3),
-    createData(time4, rainyPer4)
+    createData(time1 ?? '', rainyPer1 ?? ''),
+    createData(time2 ?? '', rainyPer2 ?? ''),
+    createData(time3 ?? '', rainyPer3 ?? ''),
+    createData(time4 ?? '', rainyPer4 ?? '')
   ]
 
   const tableCellStyle = {
@@ -120,3 +120,4 @@ export default function NearWeatherCard({
     </Card>
   )
 }
+export default NearWeatherCard

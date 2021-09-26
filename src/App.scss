@@ -1,11 +1,11 @@
 $font-path: '/components/fonts/';
-//@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
 
 @font-face {
-    font-family: 'BIZ UDゴシック BOLD';
-    src: local('BIZ UDゴシック BOLD'), url(#{$font-path}BIZ-UDGothicB.ttc) format('truetype');
-  }
+  font-family: 'BIZ UDゴシック BOLD';
+  src: local('BIZ UDゴシック BOLD'),
+    url(#{$font-path}BIZ-UDGothicB.ttc) format('truetype');
+}
 
 .app {
-    font-family: 'BIZ UDゴシック BOLD'; 
+  font-family: 'BIZ UDゴシック BOLD';
 }

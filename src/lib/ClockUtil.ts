@@ -1,3 +1,3 @@
-export const zeroPadding = (num: number, length: number) => {
+export const zeroPadding = (num: number, length: number): string => {
   return (Array(length).join('0') + num.toString()).slice(-length)
 }

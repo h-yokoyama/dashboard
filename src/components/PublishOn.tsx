@@ -1,7 +1,11 @@
 import Typography from '@mui/material/Typography'
+import React from 'react'
 
-const PublishOn = ({ publishOn }: {publishOn: any}) => {
-  return <Typography variant='body1'>{publishOn}</Typography>
+export interface Props {
+  publishOn: string | undefined
 }
 
+const PublishOn: React.FC<Props> = ({ publishOn }) => {
+  return <Typography variant='body1'>{publishOn}</Typography>
+}
 export default PublishOn

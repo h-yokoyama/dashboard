@@ -4,17 +4,12 @@ import DigitalClock from './digital/DigitalClock'
 
 export const DateContext = createContext<Date>(new Date())
 
-export default function Clock() {
+const Clock: React.FC = () => {
   const [date, setDate] = useState<Date>(new Date())
 
   useEffect(() => {
-    const subscription = interval(1000).subscribe(() => {
-      const now = new Date()
-      setDate(now)
-    })
-    return () => {
-      subscription.unsubscribe()
-    }
+    const subscription = interval(1000).subscribe(() => setDate(new Date()))
+    return () => subscription.unsubscribe()
   }, [])
 
   return (
@@ -23,3 +18,4 @@ export default function Clock() {
     </DateContext.Provider>
   )
 }
+export default Clock
