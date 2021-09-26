@@ -7,14 +7,18 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node-version: [12.x, 14.x]
 
     steps:
       - uses: actions/checkout@v2
 
-      - name: Setup Node
-        uses: actions/setup-node@v2.1.0
+      - name: Setup Node ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
         with:
-          node-versions: '16'
+          node-versions: ${{ matrix.node-version }}
 
       - name: Cache dependencies
         uses: actions/cache@v2
