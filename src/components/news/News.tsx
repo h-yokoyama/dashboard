@@ -12,7 +12,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css'
 const BASE_URL = 'https://lambda-result-bucket.s3.ap-northeast-1.amazonaws.com/'
 const URL_RANKING = `${BASE_URL}ynews_ranking.json`
 const INTERVAL = 60 * 60 * 2 * 1000 // 2hour
-const NEWS_DISPLAY_SIZE = 2
+const NEWS_DISPLAY_SIZE = 4
 
 const News: React.FC = () => {
   const [news, setNews] = useState<INewsRanking>(defaultNewsProps)
@@ -74,7 +74,7 @@ const News: React.FC = () => {
             <Grid item xs={10}>
               <Typography
                 align='left'
-                sx={{ fontSize: 14, paddingLeft: '8px' }}>
+                sx={{ fontSize: 16, paddingLeft: '8px' }}>
                 {n.title}
               </Typography>
             </Grid>
