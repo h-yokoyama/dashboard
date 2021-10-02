@@ -80,16 +80,16 @@ const Weather: React.FC = () => {
           <WeekWeatherCard {...weekWeather.dates[0]} />
         </Grid>
         <Grid item xs={4}>
-          <WeekWeatherCard {...weekWeather.dates[3]} />
-        </Grid>
-        <Grid item xs={4}>
           <WeekWeatherCard {...weekWeather.dates[1]} />
         </Grid>
         <Grid item xs={4}>
-          <WeekWeatherCard {...weekWeather.dates[4]} />
+          <WeekWeatherCard {...weekWeather.dates[2]} />
         </Grid>
         <Grid item xs={4}>
-          <WeekWeatherCard {...weekWeather.dates[2]} />
+          <WeekWeatherCard {...weekWeather.dates[3]} />
+        </Grid>
+        <Grid item xs={4}>
+          <WeekWeatherCard {...weekWeather.dates[4]} />
         </Grid>
         <Grid item xs={4}>
           <WeekWeatherCard {...weekWeather.dates[5]} />

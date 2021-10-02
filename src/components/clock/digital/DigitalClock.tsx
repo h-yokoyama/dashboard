@@ -8,7 +8,7 @@ const DigitalClock: React.FC = () => {
   const minute = zeroPadding(date.getMinutes(), 2)
   const second = zeroPadding(date.getSeconds(), 2)
   return (
-    <p style={{ fontSize: '144px', lineHeight: 0 }}>
+    <p style={{ fontSize: '72px', lineHeight: 0 }}>
       <span>{hour}</span> : <span>{minute}</span> : <span>{second}</span>
     </p>
   )
