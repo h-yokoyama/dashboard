@@ -93,7 +93,7 @@ const News: React.FC = () => {
   )
 
   return (
-    <div style={{ margin: '8px 24px 16px 0' }}>
+    <div style={{ margin: '0 24px 16px 0' }}>
       <Carousel
         showIndicators={false}
         showThumbs={false}
