@@ -99,7 +99,7 @@ const News: React.FC = () => {
         showThumbs={false}
         autoPlay
         infiniteLoop
-        interval={3000}
+        interval={8000}
         transitionTime={500}>
         {news.ranking
           .filter((_n: INews, i: number) => i % NEWS_DISPLAY_SIZE === 0)
