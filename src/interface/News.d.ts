@@ -8,4 +8,5 @@ export interface INews {
   src: string
   time: string
   title: string
+  href: string
 }

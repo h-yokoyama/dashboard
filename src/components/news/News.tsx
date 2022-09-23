@@ -72,11 +72,17 @@ const News: React.FC = () => {
         <Grid item xs={10}>
           <Grid container direction='column'>
             <Grid item xs={10}>
-              <Typography
-                align='left'
-                sx={{ fontSize: 16, paddingLeft: '8px' }}>
-                {n.title}
-              </Typography>
+              <a
+                href={n.href}
+                target='_blank'
+                rel='noreferrer'
+                style={{ color: '#fff', textDecoration: 'none' }}>
+                <Typography
+                  align='left'
+                  sx={{ fontSize: 16, paddingLeft: '8px' }}>
+                  {n.title}
+                </Typography>
+              </a>
             </Grid>
             <Grid item xs={2}>
               <Typography
